@@ -35,7 +35,7 @@ public class JDBCDemo {
 		rs.close();
 		st.close();
 		conn.close();
-		
+		System.out.println("运行结束！");
 	}
 	
 }
