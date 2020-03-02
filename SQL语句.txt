@@ -1,0 +1,44 @@
+-- 1、删除jt_db数据库（如果存在）
+drop database if exists jt_db;
+-- 2、创建数据库jt_db数据库
+create database jt_db charset utf8;
+use jt_db; -- 选择jt_db数据库
+
+-- 3、在 jt_db 库中创建 account 表(银行账户表), 要求有id(主键),name(姓名),money(账户金额)
+create table account(
+	id int primary key auto_increment,
+	name varchar(50),
+	money double
+);
+-- 4、往 account 表中, 插入3条记录
+insert into account values(null,'tony',1000);
+insert into account values(null,'tom',1000);
+insert into account values(null,'andy',1000);
+
+-- 5、在 jt_db 库中创建 user 表
+create table user(
+	id int primary key auto_increment,
+	username varchar(50),
+	password varchar(50)
+);
+-- 6、往 user 表中, 插入4条记录
+insert into user values(null, '张飞', '123');
+insert into user values(null, '刘备', '123');
+
+-- =============================================
+
+-- 7、创建数据库jt_db数据库(如果不存在才创建)
+create database if not exists jt_db charset utf8;
+use jt_db; -- 选择jt_db数据库
+-- 8、在 jt_db 库中创建 acc 表(银行账户表), 要求有id(主键),name(姓名),money(账户金额)
+create table acc(
+	id int primary key auto_increment,
+	name varchar(50),
+	money double
+);
+-- 9、往 acc 表中, 插入2条记录
+insert into acc values(null,'A',1000);
+insert into acc values(null,'B',1000);
+
+
+
